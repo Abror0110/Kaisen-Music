@@ -101,10 +101,10 @@ async def generate_cover(title, thumbnail, ctitle):
     Image.alpha_composite(image5, image6).save("temp.png")
     img = Image.open("temp.png")
     draw = ImageDraw.Draw(img)
-    font = ImageFont.truetype("etc/Roboto-Medium.ttf", 55)
+    font = ImageFont.truetyp("etc/Futura-Book-font.ttf", 60)
     font2 = ImageFont.truetype("etc/finalfont.ttf", 80)
-    draw.text((20, 528), f"Playing on {ctitle[:10]}", (0, 0, 0), font=font)
-    draw.text((20, 610), f"{title[:20]}...", (0, 0, 0), font=font2)
+    draw.text((25, 523), f"Playing on {ctitle[:10]}", (0, 0, 0), font=font)
+    draw.text((25, 605), f"{title[:20]}...", (0, 0, 0), font=font2)
     img.save("final.png")
     os.remove("temp.png")
     os.remove("background.png")
@@ -118,9 +118,9 @@ async def playlist(client, message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("✨ Group", url=f"https://t.me/{GROUP_SUPPORT}"),
+                InlineKeyboardButton("📮 Group", url=f"https://t.me/{GROUP_SUPPORT}"),
                 InlineKeyboardButton(
-                    "📣 Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    "🛠️ Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
                 ),
             ]
         ]
@@ -260,9 +260,9 @@ async def p_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("✨ Group", url=f"https://t.me/{GROUP_SUPPORT}"),
+                InlineKeyboardButton("📮 Group", url=f"https://t.me/{GROUP_SUPPORT}"),
                 InlineKeyboardButton(
-                    "📣 Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    "🛠️ Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
                 ),
             ],
             [InlineKeyboardButton("🔙 Go Back", callback_data="menu")],
@@ -308,9 +308,9 @@ async def m_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("✨ Group", url=f"https://t.me/{GROUP_SUPPORT}"),
+                InlineKeyboardButton("📮 Group", url=f"https://t.me/{GROUP_SUPPORT}"),
                 InlineKeyboardButton(
-                    "📣 Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    "🛠️ Channel", url=f"https://t.me/{UPDATES_CHANNEL}"
                 ),
             ],
             [InlineKeyboardButton("🔙 Go Back", callback_data="menu")],
@@ -561,12 +561,12 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🖱 ᴍᴇɴᴜ", callback_data="menu"),
+                    InlineKeyboardButton("🎛️ ᴍᴇɴᴜ", callback_data="menu"),
                     InlineKeyboardButton("🗑 ᴄʟᴏsᴇ", callback_data="cls"),
                 ],
                 [
                     InlineKeyboardButton(
-                        "📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "🛠️ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"
                     )
                 ],
             ]
@@ -610,12 +610,12 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🖱 ᴍᴇɴᴜ", callback_data="menu"),
+                    InlineKeyboardButton("🎛️ ᴍᴇɴᴜ", callback_data="menu"),
                     InlineKeyboardButton("🗑 ᴄʟᴏsᴇ", callback_data="cls"),
                 ],
                 [
                     InlineKeyboardButton(
-                        "📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "🛠️ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"
                     )
                 ],
             ]
@@ -644,7 +644,7 @@ async def play(_, message: Message):
             emojilist = ["1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣"]
             while j < 5:
                 toxxt += f"{emojilist[j]} [{results[j]['title'][:25]}...](https://youtube.com{results[j]['url_suffix']})\n"
-                toxxt += f" ├ 💡 **Duration** - `{results[j]['duration']}`\n"
+                toxxt += f" ├ ⏳ **Duration** - `{results[j]['duration']}`\n"
                 toxxt += f" └ ⚡ __Powered by {BOT_NAME} AI__\n\n"
                 j += 1
             keyboard = InlineKeyboardMarkup(
@@ -704,12 +704,12 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🖱 ᴍᴇɴᴜ", callback_data="menu"),
+                        InlineKeyboardButton("🎛️ ᴍᴇɴᴜ", callback_data="menu"),
                         InlineKeyboardButton("🗑 ᴄʟᴏsᴇ", callback_data="cls"),
                     ],
                     [
                         InlineKeyboardButton(
-                            "📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"
+                            "🛠️ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"
                         )
                     ],
                 ]
@@ -811,10 +811,10 @@ async def lol_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("🖱 ᴍᴇɴᴜ", callback_data="menu"),
+                InlineKeyboardButton("🎛️ ᴍᴇɴᴜ", callback_data="menu"),
                 InlineKeyboardButton("🗑 ᴄʟᴏsᴇ", callback_data="cls"),
             ],
-            [InlineKeyboardButton("📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}")],
+            [InlineKeyboardButton("🛠️ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}")],
         ]
     )
     await generate_cover(title, thumbnail, ctitle)
@@ -965,12 +965,12 @@ async def ytplay(_, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("🖱 ᴍᴇɴᴜ", callback_data="menu"),
+                InlineKeyboardButton("🎛️ ᴍᴇɴᴜ", callback_data="menu"),
                 InlineKeyboardButton("🗑 ᴄʟᴏsᴇ", callback_data="cls"),
             ],
             [
                 InlineKeyboardButton(
-                    "📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    "🛠️ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"
                 ),
                 InlineKeyboardButton("✨ ɢʀᴏᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"),
             ],
